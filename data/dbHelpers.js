@@ -3,7 +3,7 @@ const knexConfig = require('../knexfile');
 const db = knex(knexConfig.development);
 
 
-module.export = {
+module.exports = {
     insertUser: (user)=>{
         return db('users').insert(user);
     },
@@ -14,4 +14,4 @@ module.export = {
     getUsers: () => {
         return db('users');
     }
-}
+} 
